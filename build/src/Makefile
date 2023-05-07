@@ -117,25 +117,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/eeext.dir/rule:
-	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/eeext.dir/rule
-.PHONY : src/CMakeFiles/eeext.dir/rule
+src/CMakeFiles/main.dir/rule:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/main.dir/rule
+.PHONY : src/CMakeFiles/main.dir/rule
 
 # Convenience name for target.
-eeext: src/CMakeFiles/eeext.dir/rule
-.PHONY : eeext
+main: src/CMakeFiles/main.dir/rule
+.PHONY : main
 
 # fast build rule for target.
-eeext/fast:
-	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/eeext.dir/build.make src/CMakeFiles/eeext.dir/build
-.PHONY : eeext/fast
+main/fast:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 test.o: test.cpp.o
 .PHONY : test.o
 
 # target to build an object file
 test.cpp.o:
-	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/eeext.dir/build.make src/CMakeFiles/eeext.dir/test.cpp.o
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/test.cpp.o
 .PHONY : test.cpp.o
 
 test.i: test.cpp.i
@@ -143,7 +143,7 @@ test.i: test.cpp.i
 
 # target to preprocess a source file
 test.cpp.i:
-	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/eeext.dir/build.make src/CMakeFiles/eeext.dir/test.cpp.i
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/test.cpp.i
 .PHONY : test.cpp.i
 
 test.s: test.cpp.s
@@ -151,7 +151,7 @@ test.s: test.cpp.s
 
 # target to generate assembly for a file
 test.cpp.s:
-	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/eeext.dir/build.make src/CMakeFiles/eeext.dir/test.cpp.s
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/test.cpp.s
 .PHONY : test.cpp.s
 
 # Help Target
@@ -162,7 +162,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... eeext"
+	@echo "... main"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

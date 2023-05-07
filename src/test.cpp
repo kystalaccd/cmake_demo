@@ -1,9 +1,9 @@
-#include "mymath.hpp"
+#include "mathpro.hpp"
 #include <iostream>
 using namespace std;
-using namespace mymath;
+using namespace mathpro;
 
 int main(int argc, char* argv[]){
-   cout<<add(4,2)<<endl; 
+   cout<<func(4,2)<<endl; 
    return 0;
 }

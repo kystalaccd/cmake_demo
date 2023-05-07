@@ -1,14 +1,26 @@
 [
 {
   "directory": "/root/cmake_demo/build/src",
-  "command": "/usr/bin/c++  -I/root/cmake_demo/src/mymath -O3 -DNDEBUG -std=c++11 -flto -fno-fat-lto-objects -o CMakeFiles/eeext.dir/test.cpp.o -c /root/cmake_demo/src/test.cpp",
+  "command": "/usr/bin/c++  -I/root/cmake_demo/src/./mathpro -O3 -DNDEBUG -std=c++11 -flto -fno-fat-lto-objects -o CMakeFiles/main.dir/test.cpp.o -c /root/cmake_demo/src/test.cpp",
   "file": "/root/cmake_demo/src/test.cpp",
-  "output": "src/CMakeFiles/eeext.dir/test.cpp.o"
+  "output": "src/CMakeFiles/main.dir/test.cpp.o"
+},
+{
+  "directory": "/root/cmake_demo/build/src/mathpro",
+  "command": "/usr/bin/c++  -I/root/cmake_demo/src/mathpro/../mymath -O3 -DNDEBUG -std=c++11 -flto -fno-fat-lto-objects -o CMakeFiles/mathpro.dir/mathpro.cpp.o -c /root/cmake_demo/src/mathpro/mathpro.cpp",
+  "file": "/root/cmake_demo/src/mathpro/mathpro.cpp",
+  "output": "src/mathpro/CMakeFiles/mathpro.dir/mathpro.cpp.o"
 },
 {
   "directory": "/root/cmake_demo/build/src/mymath",
   "command": "/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -flto -fno-fat-lto-objects -o CMakeFiles/mymath.dir/mymath.cpp.o -c /root/cmake_demo/src/mymath/mymath.cpp",
   "file": "/root/cmake_demo/src/mymath/mymath.cpp",
   "output": "src/mymath/CMakeFiles/mymath.dir/mymath.cpp.o"
+},
+{
+  "directory": "/root/cmake_demo/build/src/print",
+  "command": "/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -flto -fno-fat-lto-objects -o CMakeFiles/print.dir/print.cpp.o -c /root/cmake_demo/src/print/print.cpp",
+  "file": "/root/cmake_demo/src/print/print.cpp",
+  "output": "src/print/CMakeFiles/print.dir/print.cpp.o"
 }
 ]

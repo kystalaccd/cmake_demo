@@ -1,8 +1,14 @@
 /root/cmake_demo/build/CMakeFiles/edit_cache.dir
 /root/cmake_demo/build/CMakeFiles/rebuild_cache.dir
-/root/cmake_demo/build/src/CMakeFiles/eeext.dir
+/root/cmake_demo/build/src/CMakeFiles/main.dir
 /root/cmake_demo/build/src/CMakeFiles/edit_cache.dir
 /root/cmake_demo/build/src/CMakeFiles/rebuild_cache.dir
+/root/cmake_demo/build/src/mathpro/CMakeFiles/mathpro.dir
+/root/cmake_demo/build/src/mathpro/CMakeFiles/edit_cache.dir
+/root/cmake_demo/build/src/mathpro/CMakeFiles/rebuild_cache.dir
 /root/cmake_demo/build/src/mymath/CMakeFiles/mymath.dir
 /root/cmake_demo/build/src/mymath/CMakeFiles/edit_cache.dir
 /root/cmake_demo/build/src/mymath/CMakeFiles/rebuild_cache.dir
+/root/cmake_demo/build/src/print/CMakeFiles/print.dir
+/root/cmake_demo/build/src/print/CMakeFiles/edit_cache.dir
+/root/cmake_demo/build/src/print/CMakeFiles/rebuild_cache.dir

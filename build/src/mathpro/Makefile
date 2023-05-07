@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cmake_demo/build/CMakeFiles /root/cmake_demo/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /root/cmake_demo/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/cmake_demo/build/CMakeFiles /root/cmake_demo/build/src/mathpro//CMakeFiles/progress.marks
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mathpro/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cmake_demo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mathpro/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,70 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mathpro/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mathpro/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/cmake_demo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+src/mathpro/CMakeFiles/mathpro.dir/rule:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/mathpro/CMakeFiles/mathpro.dir/rule
+.PHONY : src/mathpro/CMakeFiles/mathpro.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named mathpro
-
-# Build rule for target.
-mathpro: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mathpro
+# Convenience name for target.
+mathpro: src/mathpro/CMakeFiles/mathpro.dir/rule
 .PHONY : mathpro
 
 # fast build rule for target.
 mathpro/fast:
-	$(MAKE) $(MAKESILENT) -f src/mathpro/CMakeFiles/mathpro.dir/build.make src/mathpro/CMakeFiles/mathpro.dir/build
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/mathpro/CMakeFiles/mathpro.dir/build.make src/mathpro/CMakeFiles/mathpro.dir/build
 .PHONY : mathpro/fast
 
-#=============================================================================
-# Target rules for targets named mymath
+mathpro.o: mathpro.cpp.o
+.PHONY : mathpro.o
 
-# Build rule for target.
-mymath: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath
-.PHONY : mymath
+# target to build an object file
+mathpro.cpp.o:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/mathpro/CMakeFiles/mathpro.dir/build.make src/mathpro/CMakeFiles/mathpro.dir/mathpro.cpp.o
+.PHONY : mathpro.cpp.o
 
-# fast build rule for target.
-mymath/fast:
-	$(MAKE) $(MAKESILENT) -f src/mymath/CMakeFiles/mymath.dir/build.make src/mymath/CMakeFiles/mymath.dir/build
-.PHONY : mymath/fast
+mathpro.i: mathpro.cpp.i
+.PHONY : mathpro.i
 
-#=============================================================================
-# Target rules for targets named print
+# target to preprocess a source file
+mathpro.cpp.i:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/mathpro/CMakeFiles/mathpro.dir/build.make src/mathpro/CMakeFiles/mathpro.dir/mathpro.cpp.i
+.PHONY : mathpro.cpp.i
 
-# Build rule for target.
-print: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print
-.PHONY : print
+mathpro.s: mathpro.cpp.s
+.PHONY : mathpro.s
 
-# fast build rule for target.
-print/fast:
-	$(MAKE) $(MAKESILENT) -f src/print/CMakeFiles/print.dir/build.make src/print/CMakeFiles/print.dir/build
-.PHONY : print/fast
+# target to generate assembly for a file
+mathpro.cpp.s:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/mathpro/CMakeFiles/mathpro.dir/build.make src/mathpro/CMakeFiles/mathpro.dir/mathpro.cpp.s
+.PHONY : mathpro.cpp.s
 
 # Help Target
 help:
@@ -176,10 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
 	@echo "... mathpro"
-	@echo "... mymath"
-	@echo "... print"
+	@echo "... mathpro.o"
+	@echo "... mathpro.i"
+	@echo "... mathpro.s"
 .PHONY : help
 
 
@@ -191,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/cmake_demo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

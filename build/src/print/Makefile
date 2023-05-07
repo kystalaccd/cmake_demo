@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cmake_demo/build/CMakeFiles /root/cmake_demo/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /root/cmake_demo/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/cmake_demo/build/CMakeFiles /root/cmake_demo/build/src/print//CMakeFiles/progress.marks
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/print/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/cmake_demo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/print/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,70 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/print/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/print/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/cmake_demo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+src/print/CMakeFiles/print.dir/rule:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/print/CMakeFiles/print.dir/rule
+.PHONY : src/print/CMakeFiles/print.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named mathpro
-
-# Build rule for target.
-mathpro: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mathpro
-.PHONY : mathpro
-
-# fast build rule for target.
-mathpro/fast:
-	$(MAKE) $(MAKESILENT) -f src/mathpro/CMakeFiles/mathpro.dir/build.make src/mathpro/CMakeFiles/mathpro.dir/build
-.PHONY : mathpro/fast
-
-#=============================================================================
-# Target rules for targets named mymath
-
-# Build rule for target.
-mymath: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath
-.PHONY : mymath
-
-# fast build rule for target.
-mymath/fast:
-	$(MAKE) $(MAKESILENT) -f src/mymath/CMakeFiles/mymath.dir/build.make src/mymath/CMakeFiles/mymath.dir/build
-.PHONY : mymath/fast
-
-#=============================================================================
-# Target rules for targets named print
-
-# Build rule for target.
-print: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 print
+# Convenience name for target.
+print: src/print/CMakeFiles/print.dir/rule
 .PHONY : print
 
 # fast build rule for target.
 print/fast:
-	$(MAKE) $(MAKESILENT) -f src/print/CMakeFiles/print.dir/build.make src/print/CMakeFiles/print.dir/build
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/print/CMakeFiles/print.dir/build.make src/print/CMakeFiles/print.dir/build
 .PHONY : print/fast
+
+print.o: print.cpp.o
+.PHONY : print.o
+
+# target to build an object file
+print.cpp.o:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/print/CMakeFiles/print.dir/build.make src/print/CMakeFiles/print.dir/print.cpp.o
+.PHONY : print.cpp.o
+
+print.i: print.cpp.i
+.PHONY : print.i
+
+# target to preprocess a source file
+print.cpp.i:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/print/CMakeFiles/print.dir/build.make src/print/CMakeFiles/print.dir/print.cpp.i
+.PHONY : print.cpp.i
+
+print.s: print.cpp.s
+.PHONY : print.s
+
+# target to generate assembly for a file
+print.cpp.s:
+	cd /root/cmake_demo/build && $(MAKE) $(MAKESILENT) -f src/print/CMakeFiles/print.dir/build.make src/print/CMakeFiles/print.dir/print.cpp.s
+.PHONY : print.cpp.s
 
 # Help Target
 help:
@@ -176,10 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
-	@echo "... mathpro"
-	@echo "... mymath"
 	@echo "... print"
+	@echo "... print.o"
+	@echo "... print.i"
+	@echo "... print.s"
 .PHONY : help
 
 
@@ -191,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/cmake_demo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

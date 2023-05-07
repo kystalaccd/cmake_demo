@@ -1,0 +1,2 @@
+"/usr/bin/gcc-ar" cr libmathpro.a CMakeFiles/mathpro.dir/mathpro.cpp.o
+"/usr/bin/gcc-ranlib" libmathpro.a

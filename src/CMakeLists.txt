@@ -1,8 +1,14 @@
 cmake_minimum_required(VERSION 3.25 FATAL_ERROR)
 
-#add_subdirectory(mathpro)
+add_subdirectory(mathpro)
 add_subdirectory(mymath)
-include_directories(mymath)
-link_directories(mymath)
+add_subdirectory(print)
 
-add_executable(eeext test.cpp)
+add_executable(main test.cpp)
+
+include_directories(./mathpro)
+
+target_link_libraries(main
+    PRIVATE
+        mathpro
+)
