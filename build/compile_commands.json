@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/root/cmake_demo/build/src",
+  "command": "/usr/bin/c++  -I/root/cmake_demo/src/mymath -O3 -DNDEBUG -std=c++11 -flto -fno-fat-lto-objects -o CMakeFiles/eeext.dir/test.cpp.o -c /root/cmake_demo/src/test.cpp",
+  "file": "/root/cmake_demo/src/test.cpp",
+  "output": "src/CMakeFiles/eeext.dir/test.cpp.o"
+},
+{
+  "directory": "/root/cmake_demo/build/src/mymath",
+  "command": "/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -flto -fno-fat-lto-objects -o CMakeFiles/mymath.dir/mymath.cpp.o -c /root/cmake_demo/src/mymath/mymath.cpp",
+  "file": "/root/cmake_demo/src/mymath/mymath.cpp",
+  "output": "src/mymath/CMakeFiles/mymath.dir/mymath.cpp.o"
+}
+]

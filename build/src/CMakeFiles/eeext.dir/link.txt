@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -flto -fno-fat-lto-objects CMakeFiles/eeext.dir/test.cpp.o -o eeext   -L/root/cmake_demo/src/mymath 
